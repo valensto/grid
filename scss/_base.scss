@@ -1,0 +1,61 @@
+$color-primary: rgb(55, 76, 159);
+$color-secondary: #edbeb7;
+
+$color-gray: rgb(97, 97, 97);
+$color-white: white;
+
+$font-primary: 'Open Sans', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: $color-gray;
+  line-height: 1.6;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-rows: 100vh min-content 10vw min-content 10vw repeat(
+      2,
+      min-content
+    );
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start]
+    repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+    @media screen and (max-width: $bp-large) {
+      grid-template-columns:
+      [full-start] minmax(3rem, 1fr) [center-start]
+      repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end])
+      [center-end] minmax(3rem, 1fr) [full-end];
+    }
+}
+
+.section__header {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  justify-self: center;
+  letter-spacing: 0.72px;
+  max-width: 70%;
+  h2 {
+    margin-bottom: 1rem;
+  }
+}

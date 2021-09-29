@@ -1,0 +1,94 @@
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+  color: $color-white;
+  font-weight: 700;
+
+  &--big {
+    font-size: 13.5rem;
+    line-height: 13.5rem;
+    @media screen and (max-width: $bp-large) {
+      font-size: 9.5rem;
+      line-height: 9.5rem;
+    }
+    @media screen and (max-width: $bp-small) {
+      font-size: 8.5rem;
+      line-height: 8.5rem;
+    }
+  }
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 5.4rem;
+  color: $color-white;
+  line-height: 5.4rem;
+  font-weight: 600;
+  letter-spacing: -1.62px;
+  &--light {
+    color: $color-white;
+  }
+  &--dark {
+    color: $color-primary;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 3rem;
+  color: $color-white;
+  line-height: 3rem;
+  font-weight: 600;
+  &--big {
+    font-size: 4.6rem;
+    line-height: 4.6rem;
+  }
+  &--light {
+    color: $color-white;
+  }
+  &--dark {
+    color: $color-primary;
+  }
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 2.4rem;
+  color: $color-white;
+  line-height: 2.4rem;
+
+  &--light {
+    color: $color-white;
+  }
+  &--dark {
+    color: $color-primary;
+  }
+}
+
+.heading-5 {
+  @extend %heading;
+  font-size: 1.9rem;
+  color: $color-white;
+  line-height: 1.9rem;
+
+  &--light {
+    color: $color-secondary;
+  }
+  &--dark {
+    color: $color-primary;
+  }
+}
+
+.description {
+  margin: 1.5rem 0 0;
+  &--light {
+    color: $color-secondary;
+  }
+  &--dark {
+    color: $color-primary;
+  }
+}

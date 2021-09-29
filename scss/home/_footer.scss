@@ -1,0 +1,9 @@
+.footer{
+    background-color: $color-primary;
+    padding: 5rem;
+    grid-column: full-start / full-end;
+    grid-row: -2 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
